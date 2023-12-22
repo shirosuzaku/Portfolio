@@ -1,5 +1,6 @@
 const nextbtns = document.querySelectorAll('.next')
 const prevbtns = document.querySelectorAll('.prev')
+const ce = document.querySelectorAll('.caurocelElement')
 
 let translate = [0,0,0,0]
 let tmax = [1,1,1,1]
@@ -71,6 +72,14 @@ prevbtns.forEach((btn,i)=>{btn.addEventListener('click',e=>{
     }
 })})
 
+ce.forEach(ele=> ele.addEventListener('click',(e)=>{
+    if(e.target.dataset.link){
+        // console.log(window.location.origin,e.target.dataset.link)
+        window.open(`${window.location.origin}${e.target.dataset.link}`)
+    }else if(e.target.parentElement.dataset.link){
+        window.open(`${window.location.origin}${e.target.parentElement.dataset.link}`)
+    }
+}))
 
 
 window.onresize = adjust
