@@ -1,0 +1,94 @@
+:root{
+  --text: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 10%);
+  --primary: hsl(161, 95%, 45%);
+  --secondary: hsl(60, 2%, 90%);
+  --accent: hsl(297, 72%, 83%);
+} 
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.scroll{
+  position: fixed;
+  pointer-events: none;
+  height: 100vh;
+  width: 100%;
+  /* background-color: rgb(116, 116, 116); */
+}
+.scroll .bar{
+  position: absolute;
+  width: 10px;
+  height: 80vh;
+  transform: translateY(-50%);
+  top: 50%;
+  border-radius: 15px;
+  margin-left: 30px;
+  background-color: rebeccapurple;
+}
+.scroll .bar .thumb:hover{
+  cursor: pointer;
+}
+.scroll .bar .thumb{
+  pointer-events: all;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+.chapterBox.active{
+  opacity: 1;
+}
+.chapterBox{
+  position: absolute;
+  margin-left: 30px;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(56, 56, 56);
+  transform: translateY(-50%);
+  top: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+.chapterBox .holder{
+  position: absolute;
+  pointer-events: none;
+}
+.chapterBox p{
+  /* position: absolute; */
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -user-select: none;
+}
+
+
+
+main{
+  width: 80vw;
+}
+main section{
+  height: 100vh;
+}
+main section h3{
+  font-size: 50px;
+}

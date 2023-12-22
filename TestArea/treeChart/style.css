@@ -1,0 +1,92 @@
+* {
+  font-size: 20px;
+  border: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: icc;
+  src: url("./dripicons-v2.ttf");
+}
+@font-face {
+  font-family: cf;
+  src: url("./Montserrat-Medium.ttf");
+}
+
+body {
+  font-family: cf;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  font-family: icc;
+}
+.fam {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-width: 2px 0 0 0;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.children {
+  padding: 10px;
+  /* background-color: #5a5; */
+  display: flex;
+}
+.entry {
+  display: flex;
+  position: relative;
+  padding: 30px 10px 30px 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+.entry .icon {
+  opacity: 0;
+  transition: opacity 350ms ease-out;
+}
+.entry:hover .icon {
+  opacity: 1;
+}
+.edit,
+.copy,
+.delet,
+.add {
+  position: absolute;
+  width: 30px;
+  background-color: transparent;
+  color: white;
+}
+.copy {
+  top: 0;
+  right: 0;
+}
+.edit {
+  top: 0;
+  right: 30px;
+}
+.delet {
+  bottom: 0;
+  right: 30px;
+}
+.add {
+  bottom: 0;
+  right: 0;
+}
+
+.entry p {
+  width: min-content;
+  white-space: nowrap;
+}

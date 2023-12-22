@@ -1,0 +1,145 @@
+/* :root[data-theme="light"] {
+  --text: hsl(0, 0%, 0%);
+  --background: hsl(0, 0%, 90%);
+  --primary: hsl(161, 95%, 55%);
+  --secondary: hsl(60, 2%, 10%);
+  --accent: hsl(296, 72%, 17%);
+}*/
+:root{
+  --text: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 10%);
+  --primary: hsl(161, 95%, 45%);
+  --secondary: hsl(60, 2%, 90%);
+  --accent: hsl(297, 72%, 83%);
+} 
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  /* min-height: 100vh; */
+  /* background-color: aliceblue; */
+}
+
+header{
+  width: 100%;
+}
+
+main{
+  display: grid;
+  /* height: 150vh; */
+  grid-template-columns: 1fr 3fr;
+}
+
+main aside {
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+  height: 80%;
+}
+main aside ul{
+  background-color: rgba(0, 255, 255, 0.438);
+  width: 70%;
+  height: fit-content;
+  padding: 15px 0 ;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10vh;
+}
+main aside ul li:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+main aside ul li{
+  list-style-type: none;
+  /* color: black; */
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.6;
+}
+main section {
+}
+.grid{
+  margin-right: 15px;
+  margin-bottom: 30px;
+  /* width: 450px; */
+  columns: 2;
+}
+main section .item{
+  background-color: rgba(255, 255, 255, 0.3);
+  break-inside: avoid-column;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden
+}
+.item img{
+  width: 100%;
+}
+
+
+/* ============================================= */
+footer{
+  transition: height 400ms;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  height: 40vh;
+  position: sticky;
+  bottom: calc(-40vh + 60px );
+}
+/* default footer */
+.icon{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 10px;
+  left: 5vw;
+  transition: top 400ms , left 400ms;
+}
+.icon img{
+  width: 40px;
+  height: 40px;
+  transition: width 400ms , height 400ms;
+}
+.fnav{
+  position: absolute;
+  top: 20px;
+  right: 7vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fnav.b{
+  right: calc(7vw + 100px);
+}
+.fnav .nav{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.fnav p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.fnav p{
+  text-align: end;
+}
+/* Expanded footer */
+footer.active .icon{
+  top: 20px;
+  left: 5vw;
+}
+footer.active .icon img{
+  width: 180px;
+  height: 180px;
+}
