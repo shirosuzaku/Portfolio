@@ -74,12 +74,12 @@ prevbtns.forEach((btn,i)=>{btn.addEventListener('click',e=>{
 
 ce.forEach(ele=> ele.addEventListener('click',(e)=>{
     if(e.target.dataset.link){
-        console.log(window.location)
-        // console.log(`${window.location.href}${e.target.dataset.link}`)
-        window.location.href = `${window.location.href}${e.target.dataset.link}`
+        // console.log(window.location)
+        // console.log(`${window.location.origin}${e.target.dataset.link}`)
+        window.location.href = `${window.location.origin}${e.target.dataset.link}`
     }else if(e.target.parentElement.dataset.link){
         // console.log(`${window.location.href}${e.target.parentElement.dataset.link}`)
-        window.location.href = `${window.location.href}${e.target.parentElement.dataset.link}`
+        window.location.href = `${window.location.origin}${e.target.parentElement.dataset.link}`
     }
 }))
 
